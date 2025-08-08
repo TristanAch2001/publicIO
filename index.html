@@ -236,7 +236,7 @@
       }
 
       updatePlot() {
-        // filter rounds
+        // filter PCA rounds
         let data = [...this.fullData];
         const maxRound = +document.getElementById('max-removed-round').value;
         if(maxRound>0) {
@@ -265,8 +265,8 @@
         data.forEach(d => {
           const hover = [
             `Sample: ${d.sentrix_id}`,
-            `Patient ID: ${d.Patient_ID||'N/A'}`,
-            `True Type: ${d['label.type']}` ,
+            `Patient ID: ${d.Patient_ID || 'N/A'}`,
+            `True Type: ${d['label.type']}`,
             `<b>Pred Type:</b> ${d.max_label_type} (${(+d.max_label_score_type).toFixed(3)}/${(+d.correct_label_score_type).toFixed(3)})`
           ].join('<br>');
 
