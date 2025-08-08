@@ -230,7 +230,7 @@
           .addEventListener('click', ()=>{
             if(!this.lastSelectedIds.length) return;
             navigator.clipboard.writeText(this.lastSelectedIds.join('\n'))
-              .then(()=> alert(Copied ${this.lastSelectedIds.length} sample IDs))
+              .then(()=> alert(`Copied ${this.lastSelectedIds.length} sample IDs`))
               .catch(err => console.error('Copy failed:', err));
           });
       }
